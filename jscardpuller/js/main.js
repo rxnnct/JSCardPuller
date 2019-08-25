@@ -9,7 +9,7 @@ function generateArrayOfNumbers() {
     for (var i = 0; i <= numberOfNumbers; i++) {
         arrayOfNumbers.push(i);
     }
-    document.getElementById("number").innerHTML = "Last number: "
+    document.getElementById("number").innerHTML = "Last number: ";
     printArrayOfNumbers();
 }
 
