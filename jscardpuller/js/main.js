@@ -1,3 +1,8 @@
+//"use strict";
+//todo: 
+//1) remake code for usestrict
+//2) generateArrayOfNumbers to two functions
+
 function generateArrayOfNumbers() {
     numberOfNumbers = document.getElementById("input").value;
     resultString = "";
@@ -23,9 +28,7 @@ function pullNumber() {
 }
 
 function printArrayOfNumbers(){
-    for (var i = 1; i <= arrayOfNumbers.length - 1; i++) {
-        resultString = resultString + " " + arrayOfNumbers[i];
-    }
+	resultString = arrayOfNumbers.slice(1).join(" ");
     document.getElementById("list").innerHTML = resultString;
 }
 
