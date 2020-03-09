@@ -1,7 +1,3 @@
-var numberOfNumbers;
-var arrayOfNumbers = [];
-var resultString = "";
-
 function generateArrayOfNumbers() {
     numberOfNumbers = document.getElementById("input").value;
     resultString = "";
