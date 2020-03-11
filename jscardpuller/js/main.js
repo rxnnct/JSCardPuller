@@ -1,8 +1,3 @@
-//"use strict";
-//todo: 
-//1) remake code for usestrict
-//2) generateArrayOfNumbers to two functions
-
 function generateArrayOfNumbers() {
     numberOfNumbers = document.getElementById("input").value;
     resultString = "";
