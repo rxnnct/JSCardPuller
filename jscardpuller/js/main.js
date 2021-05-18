@@ -13,7 +13,7 @@ function printArrayOfNumbers() {
     document.getElementById("list-of-numbers").textContent = resultString;
 }
 
-document.getElementById("generate-list-of-numbers").onclick = function (){
+document.getElementById("generate-list-of-numbers").onclick = function () {
     numberOfNumbers = document.getElementById("input").value;
     resultString = "";
     arrayOfNumbers = [];
@@ -24,7 +24,7 @@ document.getElementById("generate-list-of-numbers").onclick = function (){
     printArrayOfNumbers();
 }
 
-document.getElementById("pull-number").onclick = function (){
+document.getElementById("pull-number").onclick = function () {
     if (arrayOfNumbers.length - 1) {
         resultString = "";
         let randomNumber = randomInteger(1, arrayOfNumbers.length - 1);
