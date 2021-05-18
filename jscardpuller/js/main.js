@@ -1,34 +1,38 @@
-function generateArrayOfNumbers() {
+"use strict";
+
+let numberOfNumbers;
+let arrayOfNumbers;
+let resultString;
+
+function randomInteger(min, max) {
+    return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
+function printArrayOfNumbers() {
+	resultString = arrayOfNumbers.slice(1).join(" ");
+    document.getElementById("list-of-numbers").textContent = resultString;
+}
+
+document.getElementById("generate-list-of-numbers").onclick = function (){
     numberOfNumbers = document.getElementById("input").value;
     resultString = "";
     arrayOfNumbers = [];
-    for (var i = 0; i <= numberOfNumbers; i++) {
+    for (let i = 0; i <= numberOfNumbers; i++) {
         arrayOfNumbers.push(i);
     }
-    document.getElementById("number").innerHTML = "Last number: ";
+    document.getElementById("last-pulled-number").textContent = "Last number: ";
     printArrayOfNumbers();
 }
 
-function pullNumber() {
+document.getElementById("pull-number").onclick = function (){
     if (arrayOfNumbers.length - 1) {
         resultString = "";
-        var number = randomInteger(1, arrayOfNumbers.length - 1);
-        var lastNumber = arrayOfNumbers[number];
-        arrayOfNumbers.splice(number, 1);
-        document.getElementById("number").innerHTML = "Last number: " + lastNumber;
+        let randomNumber = randomInteger(1, arrayOfNumbers.length - 1);
+        let lastNumber = arrayOfNumbers[randomNumber];
+        arrayOfNumbers.splice(randomNumber, 1);
+        document.getElementById("last-pulled-number").textContent = "Last number: " + lastNumber;
         printArrayOfNumbers();
     } else {
-        document.getElementById("number").innerHTML = "Empty"
+        document.getElementById("last-pulled-number").textContent = "Empty";
     }
-}
-
-function printArrayOfNumbers(){
-	resultString = arrayOfNumbers.slice(1).join(" ");
-    document.getElementById("list").innerHTML = resultString;
-}
-
-function randomInteger(min, max) {
-    var randomNumber = min + Math.random() * (max + 1 - min);
-    randomNumber = Math.floor(randomNumber);
-    return randomNumber;
 }
