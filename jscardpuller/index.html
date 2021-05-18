@@ -1,17 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>JSCardPuller</title>
-</head>
-<body>
-<p><input type="text" id="input"></p>
-<button type="button" onClick="generateArrayOfNumbers()">Generate</button>
-<button type="button" onClick="pullNumber()">Pull</button>
-<p><a id="list"></a></p>
-<p><a id="number"></a></p>
 
-<script type="text/javascript" src="js/main.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>JSCardPuller</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
 
-</body>
+    <body>
+        <p>
+            <label for="input">Input number:</label>
+            <input type="text" id="input" value="10">
+        </p>
+        <button type="button" id="generate-list-of-numbers">Generate</button>
+        <button type="button" id="pull-number">Pull</button>
+        <p><span id="list-of-numbers"></span></p>
+        <p><span id="last-pulled-number"></span></p>
+
+        <script src="js/main.js"></script>
+    </body>
 </html>
